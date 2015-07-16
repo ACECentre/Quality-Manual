@@ -1,6 +1,10 @@
 # Quality-Manual
 Quality manual WIP
 
+You can view the current latest build of the document [here](http://htmlpreview.github.io/?https://github.com/ACECentre/Quality-Manual/blob/master/Main.html)
+
+##Instructions for editing
+
 1. Clone the repo locally
 ``git clone https://github.com/ACECentre/Quality-Manual.git``
 
