@@ -1,0 +1,12 @@
+= Quality Manual
+Paul Hewett <phewett@acecentre.org.uk>, Will Wade <wwade@acecentre.org.uk>
+2015-07-01
+:docversion: 1.0.0
+:toc: right
+:doctype: book
+:description:  A working quality manual for AAC services
+
+
+{toc}
+
+include::background.adoc[]
