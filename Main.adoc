@@ -4,7 +4,7 @@ Paul Hewett <phewett@acecentre.org.uk>, Will Wade <wwade@acecentre.org.uk>
 :docversion: 1.0.0
 :toc: right
 :doctype: book
-:description:  A working quality manual for AAC services
+:description:  A working quality manual for AAC services. ACE Centre
 
 
 {toc}
