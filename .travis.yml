@@ -1,0 +1,23 @@
+language: ruby
+rvm:
+- 2.2.0
+branches:
+  only:
+  - master
+before_install:
+- openssl aes-256-cbc -K $encrypted_e750d16ffcf3_key -iv $encrypted_e750d16ffcf3_iv
+  -in publish-key-qh.enc -out publish-key-qh -d
+- chmod u=rw,og= ~/.ssh/publish-key-qh
+- echo "Host github.com" >> ~/.ssh/config
+- echo "  IdentityFile ~/.ssh/publish-key-qh" >> ~/.ssh/config
+- git --version
+- git remote set-url origin git@github.com:ACECentre/Quality-Manual.git
+- git fetch origin -f gh-pages:gh-pages
+install:
+- gem install asciidoctor
+script:
+- ls -al
+notifications:
+  email:
+    on_success: never
+    on_failure: always
