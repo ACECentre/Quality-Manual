@@ -18,7 +18,7 @@ task :travis do
     dir = File.join dir, 'site'
     sh 'asciidoctor Main.adoc -o index.html'
     #sh 'asciidoctor Main.adoc -b docbook5'
-    fail "Build failed." unless Dir.exists? destination
+    #fail "Build failed." unless Dir.exists? destination
     sh "git clone --branch #{deploy_branch} #{repo} #{dir}"
     sh %Q(rsync -rt --del --exclude=".git" #{destination} #{dir})
     Dir.chdir dir do
