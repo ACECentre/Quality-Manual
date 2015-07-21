@@ -1,7 +1,7 @@
 # Quality-Manual
 Quality manual WIP
 
-You can view the current latest build of the document [here](http://htmlpreview.github.io/?https://github.com/ACECentre/Quality-Manual/blob/master/Main.html)
+You can view the current latest build of the document [here](http://acecentre.github.io/Quality-Manual/index.html)
 
 ##Instructions for editing
 
@@ -18,4 +18,4 @@ You can view the current latest build of the document [here](http://htmlpreview.
 
 6. commit to git as you go!
 
-7. To update the HTML preview for git do ``asciidoctor Main.adoc`` in the directory of the main repository
+7. When you commit [travis-ci](http://travis-ci.org) automates the build of the document to a [web-page](http://acecentre.github.io/Quality-Manual/index.html) and [DocBook](http://acecentre.github.io/Quality-Manual/Main.xml)
