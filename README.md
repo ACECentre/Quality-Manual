@@ -2,6 +2,7 @@
 Quality manual WIP
 
 You can view the current latest build of the document [here](http://acecentre.github.io/Quality-Manual/index.html)
+There is also a [PDF](http://acecentre.github.io/Quality-Manual/Main.pdf) of the document and [DocBook](http://acecentre.github.io/Quality-Manual/Main.xml) version available. 
 
 ##Instructions for editing
 
