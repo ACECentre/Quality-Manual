@@ -16,18 +16,8 @@ task :travis do
   rev = %x(git rev-parse HEAD).strip
 
   Dir.mktmpdir do |dir|
-    destination = File.join dir, 'site'
-    puts "hello"
-    puts destination
-    puts " - and me "
-    puts dir
-    puts " - "
-    puts repo 
-    sh 'asciidoctor Main.adoc -o index.html'
-    #sh 'asciidoctor Main.adoc -b docbook5'
-    fail "Build failed." unless Dir.exists?(destination)
-    sh "git clone --branch #{deploy_branch} #{repo} #{dir}"
-    sh %Q(rsync -rt --del --exclude=".git" #{destination} #{dir})
+    sh "git clone --branch gh-pages #{repo} #{dir}"
+    sh "asciidoctor Main.adoc -D #{dir} -o index.html"
     Dir.chdir dir do
       # setup credentials so Travis CI can push to GitHub
       verbose false do
