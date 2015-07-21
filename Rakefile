@@ -17,6 +17,12 @@ task :travis do
 
   Dir.mktmpdir do |dir|
     destination = File.join dir, 'site'
+    puts "hello"
+    puts destination
+    puts " - and me "
+    puts dir
+    puts " - "
+    puts repo 
     sh 'asciidoctor Main.adoc -o index.html'
     #sh 'asciidoctor Main.adoc -b docbook5'
     fail "Build failed." unless Dir.exists?(destination)
