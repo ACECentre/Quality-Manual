@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Quality Manual</title>
+<date>2015-07-01</date>
+<author>
+<personname>
+<firstname>Paul Hewett &lt;phewett@acecentre.org.uk&gt;, Will Wade &lt;wwade@acecentre.org.uk&gt;</firstname>
+</personname>
+</author>
+<authorinitials>P</authorinitials>
+</info>
+<preface>
+<title></title>
+<simpara></simpara>
+</preface>
+<part xml:id="_background">
+<title>Background</title>
+<chapter xml:id="_level_1_section">
+<title>Level 1 Section</title>
+<simpara>asda</simpara>
+<section xml:id="_level_2_section">
+<title>Level 2 Section</title>
+<simpara>asdad</simpara>
+<section xml:id="_level_3_section">
+<title>Level 3 Section</title>
+<simpara>adsad</simpara>
+<section xml:id="_level_4_section">
+<title>Level 4 Section</title>
+<simpara>dadaa</simpara>
+<section xml:id="_level_5_section">
+<title>Level 5 Section</title>
+<simpara>asdadsa</simpara>
+</section>
+</section>
+</section>
+</section>
+</chapter>
+<chapter xml:id="_another_level_1_section">
+<title>Another Level 1 Section</title>
+<simpara>adsadsas</simpara>
+<simpara>According to Wikipedia&#8230;&#8203;</simpara>
+<table frame="topbot" rowsep="1" colsep="1">
+<title>An example table</title>
+<?dbhtml table-width="50%"?>
+<?dbfo table-width="50%"?>
+<?dblatex table-width="50%"?>
+<tgroup cols="3">
+<colspec colname="col_1" colwidth="43*"/>
+<colspec colname="col_2" colwidth="85*"/>
+<colspec colname="col_3" colwidth="85*"/>
+<thead>
+<row>
+<entry align="right" valign="top"></entry>
+<entry align="center" valign="top" namest="col_2" nameend="col_3">Columns 2 and 3</entry>
+</row>
+</thead>
+<tfoot>
+<row>
+<entry align="right" valign="top"><simpara><emphasis role="strong">footer 1</emphasis></simpara></entry>
+<entry align="center" valign="top"><simpara><literal>footer 2</literal></simpara></entry>
+<entry align="center" valign="top"><simpara><emphasis>footer 3</emphasis></simpara></entry>
+</row>
+</tfoot>
+<tbody>
+<row>
+<entry align="right" valign="top"><simpara><emphasis role="strong">1</emphasis></simpara></entry>
+<entry align="center" valign="top"><simpara><literal>Item 1</literal></simpara></entry>
+<entry align="center" valign="top"><simpara><emphasis>Item 1</emphasis></simpara></entry>
+</row>
+<row>
+<entry align="right" valign="top"><simpara><emphasis role="strong">2</emphasis></simpara></entry>
+<entry align="center" valign="top"><simpara><literal>Item 2</literal></simpara></entry>
+<entry align="center" valign="top"><simpara><emphasis>Item 2</emphasis></simpara></entry>
+</row>
+<row>
+<entry align="right" valign="top"><simpara><emphasis role="strong">3</emphasis></simpara></entry>
+<entry align="center" valign="top"><simpara><literal>Item 3</literal></simpara></entry>
+<entry align="center" valign="top"><simpara><emphasis>Item 3</emphasis></simpara></entry>
+</row>
+<row>
+<entry align="right" valign="top"><simpara><emphasis role="strong">4</emphasis></simpara></entry>
+<entry align="center" valign="top"><simpara><literal>Item 4</literal></simpara></entry>
+<entry align="center" valign="top"><simpara><emphasis>Item 4</emphasis></simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+<simpara>*Stars* will appear as <emphasis role="strong">Stars</emphasis>, not as bold text.</simpara>
+<simpara>&amp;sect; will appear as an entity reference, not the &sect; symbol.</simpara>
+<simpara>__func__ will appear as <emphasis>func</emphasis>, not as emphasized text.</simpara>
+<simpara>{two-semicolons} will appear ;;, not resolved as ;;.</simpara>
+<simpara>The current version of the application is 1.0.0.</simpara>
+</chapter>
+</part>
+</book>
