@@ -2,8 +2,7 @@ desc 'Generate deck from Travis CI and publish to GitHub Pages.'
 task :travis do
   # if this is a pull request, do a simple build of the site and stop
   if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
-    puts 'Pull request detected. Executing build only.'
-    sh 'bundle exec rake build'
+    puts 'Pull request detected. Doing nowt.'
     next
   end
 
