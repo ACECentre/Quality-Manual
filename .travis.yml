@@ -4,20 +4,11 @@ rvm:
 branches:
   only:
   - master
-before_install:
-- openssl aes-256-cbc -K $encrypted_e750d16ffcf3_key -iv $encrypted_e750d16ffcf3_iv
-  -in publish-key-qh.enc -out publish-key-qh -d
-- chmod u=rw,og= ~/.ssh/publish-key-qh
-- echo "Host github.com" >> ~/.ssh/config
-- echo "  IdentityFile ~/.ssh/publish-key-qh" >> ~/.ssh/config
-- git --version
-- git remote set-url origin git@github.com:ACECentre/Quality-Manual.git
-- git fetch origin -f gh-pages:gh-pages
-install:
-- gem install asciidoctor
-script:
-- ls -al
+before_install: gem install asciidoctor
+script: bundle exec rake travis
 notifications:
   email:
     on_success: never
     on_failure: always
+env:
+- secure: "wJF/TTdAZcde5gEazvjfD1b+dwfGsbEN9VEFQR1C3+/p6ruUz80R7ZeL9Aa/4i6Zy446kx2fkwOsMukyAu9yaVqaJzepE3rWljviN1Pqz1ggEwXZiVcA3TtNgt6vnqUS5AKcS4rKQvO6zpDTb9Wtu/r+fTdRUmMEkoywMnmlIrrCFsSzpqGOJO704jZq3MNODhZRQ8h6gp2zw2M45p+vij/ImFzVDA5fKQ+6bcbTZL9G4uxbOlqtnj0F/l0NonMu9h1M/WNL96p7qc8auSRersiUh1OPcBM7uRaT6fGOwuP0P3yjdYm8pHIBZH/yWlmXcxyoHoSwmETKruqdnEUiAuRCtDL4epf/+m5qamyIitZwu+OtmYMq5cJlu/RA3XMHxpL9GzcVEJRPukhjLY18jHtrOgXBrHTeLl2cSj3+ghZgyGWWV+oBGP7hEaIt5Vc7UYKjeyWBNTl/iT5221+r3UCSbWynk7xCXrTGJuA0i6G7z6yTiYUMNv2dy1s+T1Hi/inKi+0LJ46V9pBPbDQwaBC5im6oKlfb6RZriQlXA0ZUPoicrUy2h8pAZBxulK+sQW9zCWj/5zcd5rQ5lixCVlBUOMTCpLQAxnd+AsJFTDzPl+QmF8Zb06VnJMp6NkCtwenkAQaMEJX7ivgilvTsk4NKBwg14sBh6bT7bZMFvpI="
