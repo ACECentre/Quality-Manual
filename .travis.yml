@@ -9,7 +9,7 @@ branches:
   - master
 before_install:
 - cabal update
-- cabal install pandoc pandoc-citeproc 
+- cabal install pandoc
 - gem install asciidoctor
 - gem install --pre asciidoctor-pdf
 script: exec rake travis
