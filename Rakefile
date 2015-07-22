@@ -20,7 +20,8 @@ task :travis do
     sh "asciidoctor Main.adoc -D #{dir} -o index.html"
     sh "asciidoctor -r asciidoctor-pdf -b pdf Main.adoc -D #{dir} -o Main.pdf"
     sh "asciidoctor -b docbook5 Main.adoc -D #{dir} -o Main.xml"
-    sh "ls #{dir}"
+    sh "which pandoc"
+    sh "ls /home/travis/.cabal/bin"
     sh "pandoc #{dir}/Main.xml -f docbook -t docx -o #{dir}/Main.docx"
     Dir.chdir dir do
       # setup credentials so Travis CI can push to GitHub
