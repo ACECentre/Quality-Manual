@@ -7,6 +7,9 @@ branches:
 before_install:
 - gem install asciidoctor
 - gem install --pre asciidoctor-pdf
+addons:
+  apt_packages:
+    - pandoc
 script: exec rake travis
 notifications:
   email:
