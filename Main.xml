@@ -20,7 +20,8 @@
 <title>Background</title>
 <chapter xml:id="_level_1_section">
 <title>Level 1 Section</title>
-<simpara>asda</simpara>
+<simpara>asda
+paul is here!</simpara>
 <section xml:id="_level_2_section">
 <title>Level 2 Section</title>
 <simpara>asdad</simpara>
@@ -89,7 +90,6 @@
 </tgroup>
 </table>
 <simpara>*Stars* will appear as <emphasis role="strong">Stars</emphasis>, not as bold text.</simpara>
-<simpara>&amp;sect; will appear as an entity reference, not the &sect; symbol.</simpara>
 <simpara>__func__ will appear as <emphasis>func</emphasis>, not as emphasized text.</simpara>
 <simpara>{two-semicolons} will appear ;;, not resolved as ;;.</simpara>
 <simpara>The current version of the application is 1.0.0.</simpara>
