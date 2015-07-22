@@ -1,6 +1,6 @@
 addons:
   apt_packages:
-    - haskell-platform 
+    - pandoc
 language: ruby
 rvm:
 - 2.2.0
@@ -8,8 +8,6 @@ branches:
   only:
   - master
 before_install:
-- cabal update
-- cabal install pandoc
 - gem install asciidoctor
 - gem install --pre asciidoctor-pdf
 script: exec rake travis
