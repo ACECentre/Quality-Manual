@@ -20,4 +20,4 @@ addons:
   artifacts:
     # ...
     paths:
-    - $(ls /var/adoc/* | tr "\n" ":")
+    - $(ls /tmp/adoc/* | tr "\n" ":")
