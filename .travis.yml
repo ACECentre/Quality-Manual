@@ -1,12 +1,10 @@
 language: ruby
-rvm:
-- 2.2.0
+rvm: 2.2.0
 branches:
   only:
   - master
 before_install:
-  - 'wget https://7de4dfdec62155b49b44-d726a73613a1989d29b147f20996e7c1.ssl.cf2.rackcdn.com/pandoc-1.12.3-linux-debian-x86_64.zip && unzip pandoc-1.12.3-linux-debian-x86_64.zip;'
-before_install:
+- 'wget https://7de4dfdec62155b49b44-d726a73613a1989d29b147f20996e7c1.ssl.cf2.rackcdn.com/pandoc-1.12.3-linux-debian-x86_64.zip && unzip pandoc-1.12.3-linux-debian-x86_64.zip;'
 - gem install asciidoctor
 - gem install --pre asciidoctor-pdf
 script: exec rake travis
@@ -17,4 +15,4 @@ notifications:
 env:
   global:
     - PATH=$TRAVIS_BUILD_DIR/pandoc:$PATH
-- secure: "wJF/TTdAZcde5gEazvjfD1b+dwfGsbEN9VEFQR1C3+/p6ruUz80R7ZeL9Aa/4i6Zy446kx2fkwOsMukyAu9yaVqaJzepE3rWljviN1Pqz1ggEwXZiVcA3TtNgt6vnqUS5AKcS4rKQvO6zpDTb9Wtu/r+fTdRUmMEkoywMnmlIrrCFsSzpqGOJO704jZq3MNODhZRQ8h6gp2zw2M45p+vij/ImFzVDA5fKQ+6bcbTZL9G4uxbOlqtnj0F/l0NonMu9h1M/WNL96p7qc8auSRersiUh1OPcBM7uRaT6fGOwuP0P3yjdYm8pHIBZH/yWlmXcxyoHoSwmETKruqdnEUiAuRCtDL4epf/+m5qamyIitZwu+OtmYMq5cJlu/RA3XMHxpL9GzcVEJRPukhjLY18jHtrOgXBrHTeLl2cSj3+ghZgyGWWV+oBGP7hEaIt5Vc7UYKjeyWBNTl/iT5221+r3UCSbWynk7xCXrTGJuA0i6G7z6yTiYUMNv2dy1s+T1Hi/inKi+0LJ46V9pBPbDQwaBC5im6oKlfb6RZriQlXA0ZUPoicrUy2h8pAZBxulK+sQW9zCWj/5zcd5rQ5lixCVlBUOMTCpLQAxnd+AsJFTDzPl+QmF8Zb06VnJMp6NkCtwenkAQaMEJX7ivgilvTsk4NKBwg14sBh6bT7bZMFvpI="
+    - secure: "wJF/TTdAZcde5gEazvjfD1b+dwfGsbEN9VEFQR1C3+/p6ruUz80R7ZeL9Aa/4i6Zy446kx2fkwOsMukyAu9yaVqaJzepE3rWljviN1Pqz1ggEwXZiVcA3TtNgt6vnqUS5AKcS4rKQvO6zpDTb9Wtu/r+fTdRUmMEkoywMnmlIrrCFsSzpqGOJO704jZq3MNODhZRQ8h6gp2zw2M45p+vij/ImFzVDA5fKQ+6bcbTZL9G4uxbOlqtnj0F/l0NonMu9h1M/WNL96p7qc8auSRersiUh1OPcBM7uRaT6fGOwuP0P3yjdYm8pHIBZH/yWlmXcxyoHoSwmETKruqdnEUiAuRCtDL4epf/+m5qamyIitZwu+OtmYMq5cJlu/RA3XMHxpL9GzcVEJRPukhjLY18jHtrOgXBrHTeLl2cSj3+ghZgyGWWV+oBGP7hEaIt5Vc7UYKjeyWBNTl/iT5221+r3UCSbWynk7xCXrTGJuA0i6G7z6yTiYUMNv2dy1s+T1Hi/inKi+0LJ46V9pBPbDQwaBC5im6oKlfb6RZriQlXA0ZUPoicrUy2h8pAZBxulK+sQW9zCWj/5zcd5rQ5lixCVlBUOMTCpLQAxnd+AsJFTDzPl+QmF8Zb06VnJMp6NkCtwenkAQaMEJX7ivgilvTsk4NKBwg14sBh6bT7bZMFvpI="
