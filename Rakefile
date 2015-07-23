@@ -22,7 +22,7 @@ task :travis do
     sh "asciidoctor -b docbook5 Main.adoc -D #{dir} -o Main.xml"
     #sh "which pandoc"
     #sh "ls /home/travis/.cabal/bin"
-    #sh "pandoc #{dir}/Main.xml -f docbook -t docx -o #{dir}/Main.docx"
+    sh "pandoc #{dir}/Main.xml -f docbook -t docx -o #{dir}/Main.docx"
     Dir.chdir dir do
       # setup credentials so Travis CI can push to GitHub
       verbose false do
