@@ -18,11 +18,9 @@ task :travis do
   Dir.mktmpdir do |dir|
     sh "git clone --branch gh-pages #{repo} #{dir}"
     sh "asciidoctor Main.adoc -D #{dir} -o index.html"
-    Dir.mkdir('/tmp/adoc') unless File.directory?('/tmp/adoc')
-    sh "asciidoctor -r asciidoctor-pdf -b pdf Main.adoc -D /tmp/adoc -o Main.pdf"
+    sh "asciidoctor -r asciidoctor-pdf -b pdf Main.adoc -o Main.pdf"
     sh "asciidoctor -b docbook5 Main.adoc -D #{dir} -o Main.xml"
-    sh "pandoc #{dir}/Main.xml -f docbook -t docx -o /tmp/adoc/Main.docx"
-    sh "ls /tmp/adoc/* | tr '\n' ':' "
+    sh "pandoc #{dir}/Main.xml -f docbook -t docx -o Main.docx"
     Dir.chdir dir do
       # setup credentials so Travis CI can push to GitHub
       verbose false do

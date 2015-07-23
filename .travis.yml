@@ -20,6 +20,3 @@ addons:
   artifacts:
     - true
     debug: true
-    paths:
-    - $(ls /tmp/adoc/*.pdf | tr "\n" ":")
-    - $(ls /tmp/adoc/*.docx | tr "\n" ":")
