@@ -16,12 +16,12 @@ task :travis do
   rev = %x(git rev-parse HEAD).strip
 
   Dir.mktmpdir do |dir|
-    # Keep binary files out of gh-pages. Put them on S3
     sh "git clone --branch gh-pages #{repo} #{dir}"
     sh "asciidoctor Main.adoc -D #{dir} -o index.html"
-    sh "asciidoctor -r asciidoctor-pdf -b pdf Main.adoc -o Main.pdf"
+    Dir.mkdir('/tmp/adoc') unless File.directory?('/tmp/adoc')
+    sh "asciidoctor -r asciidoctor-pdf -b pdf Main.adoc -D /tmp/adoc -o Main.pdf"
     sh "asciidoctor -b docbook5 Main.adoc -D #{dir} -o Main.xml"
-    sh "pandoc #{dir}/Main.xml -f docbook -t docx -o ./Main.docx"
+    sh "pandoc #{dir}/Main.xml -f docbook -t docx -o /tmp/adoc/Main.docx"
     Dir.chdir dir do
       # setup credentials so Travis CI can push to GitHub
       verbose false do
