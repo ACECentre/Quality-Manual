@@ -20,4 +20,5 @@ addons:
   artifacts:
     # ...
     paths:
-    - $(ls /tmp/adoc/* | tr "\n" ":")
+    - $(ls /tmp/adoc/*.pdf | tr "\n" ":")
+    - $(ls /tmp/adoc/*.docx | tr "\n" ":")
