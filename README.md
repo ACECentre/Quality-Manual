@@ -1,8 +1,8 @@
 # Quality-Manual
 Quality manual WIP
 
-You can view the current latest build of the document [here](http://acecentre.github.io/Quality-Manual/index.html)
-There is also a [PDF](http://acecentre.github.io/Quality-Manual/Main.pdf) of the document a [DocBook](http://acecentre.github.io/Quality-Manual/Main.xml) and [Word Docx](http://acecentre.github.io/Quality-Manual/Main.docx) version available.
+You can view the current latest build of the document [here](http://quality-manual.s3-website-eu-west-1.amazonaws.com/index.html)
+There is also a [PDF](http://quality-manual.s3-website-eu-west-1.amazonaws.com/Main.pdf) of the document a [DocBook](http://acecentre.github.io/Quality-Manual/Main.xml) and [Word Docx](http://quality-manual.s3-website-eu-west-1.amazonaws.com/Main.docx) version available.
 
 ##Instructions for editing
 
@@ -13,6 +13,6 @@ There is also a [PDF](http://acecentre.github.io/Quality-Manual/Main.pdf) of the
 
 3. commit to git as you go!
 
-4. When you commit [travis-ci](http://travis-ci.org) automates the build of the document to a [web-page](http://acecentre.github.io/Quality-Manual/index.html) and [DocBook](http://acecentre.github.io/Quality-Manual/Main.xml)
+4. When you commit [travis-ci](http://travis-ci.org) automates the build of the document to a [web-page](http://quality-manual.s3-website-eu-west-1.amazonaws.com/index.html) and [DocBook](http://quality-manual.s3-website-eu-west-1.amazonaws.com/Main.xml)
 
 NB: Install [asciidoctor](http://asciidoctor.org/#installation)  ``gem install asciidoctor`` if you want to play around on the command line.
